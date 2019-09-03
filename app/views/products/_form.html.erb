@@ -1,0 +1,14 @@
+  <%= simple_form_for(@product) do |p| %>
+    <%= p.error_notification %>
+    <%= p.input :name,
+                required: true,
+                autofocus: true,
+                input_html: { autocomplete: "name" }%>
+    <%= p.input :description,
+                required: true,
+                autofocus: true,
+                input_html: { autocomplete: "description" }%>
+    <%= p.input :photo %>
+    <%= p.input :photo_cache, as: :hidden %>
+    <%= p.button :submit, "Submit", class: "b-border-tbg" %>
+  <% end %>
