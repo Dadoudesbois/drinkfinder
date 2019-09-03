@@ -4,7 +4,7 @@ Rails.application.routes.draw do
 
   resources :products
   resources :bars
-  resources :offers, only: [ :show, :edit, :update, :destroy ]
+  resources :offers, only: [ :show, :index, :new, :create, :edit, :update, :destroy ]
 
   resources :bars do
       resources :offers, only: [ :index, :new, :create ]

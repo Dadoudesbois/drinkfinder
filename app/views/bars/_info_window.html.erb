@@ -1,1 +1,5 @@
 <p>YEPAA COCOTTE</p>
+<%= link_to "addd my drink", new_bar_offer_path(bar) %>
+<% bar.offers.each do |offer| %>
+  <%= offer.product.name %>
+<%end%>

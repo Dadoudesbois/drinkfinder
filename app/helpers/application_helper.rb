@@ -1,9 +1,9 @@
 module ApplicationHelper
   def bars
-    bars = Bars.all
+    bars = Bar.all
   end
 
   def products
-    products = Products.all
+    products = Product.all
   end
 end
