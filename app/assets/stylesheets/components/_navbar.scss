@@ -10,3 +10,27 @@
 .navbar-lewagon .navbar-brand img {
   width: 40px;
 }
+
+.dropdown-item {
+  color: $gray;
+
+  &:hover {
+    opacity: 0.7;
+    font-weight: bold;
+    background: white;
+    border: 2px solid $gray;
+  }
+}
+
+.dropdown-menu {
+  background-color: rgba(250,250,250,0.2);
+}
+
+li a.nav-link {
+  color: $gray;
+  &:hover {
+    opacity: 0.7;
+    font-weight: bold;
+    border-bottom: 2px solid $gray;
+  }
+}
