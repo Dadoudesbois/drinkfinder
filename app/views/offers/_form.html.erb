@@ -1,0 +1,11 @@
+<%= simple_form_for ([@bar, @offer]) do |o| %>
+
+  <%= o.error_notification %>
+
+  <%= o.input :price %>
+  <%= o.input :product_id, collection: products, value_method: :id %>
+  <%= o.input :bar_id, collection: bars, value_method: :id %>
+  <p> if your product is not in the list, <%= link_to "create new", new_product_path %></p>
+
+  <%= o.button :submit, "Submit", class: "b-border-tbg" %>
+<% end %>

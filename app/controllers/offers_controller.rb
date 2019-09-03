@@ -6,8 +6,9 @@ class OffersController < ApplicationController
 
   def create
     @offer = Offer.new(offer_params)
-    @bar = Bar.find(params[:bar_id])
-    @bar = @offer.bar
+    if @offer.save!
+      redirect_to root_path
+    end
   end
 
   def edit
@@ -15,7 +16,7 @@ class OffersController < ApplicationController
 
   def update
     if @offer.update
-      redirect_to offer_path(@offer)
+      redirect_to root_path
     else
       render :edit
     end
@@ -34,6 +35,6 @@ class OffersController < ApplicationController
   end
 
   def offer_params
-    params.require(:offer).permit(:price)
+    params.require(:offer).permit(:price, :bar_id, :product_id)
   end
 end
